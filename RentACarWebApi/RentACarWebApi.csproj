@@ -45,18 +45,22 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="EntityFramework">
-      <HintPath>..\..\..\..\Desktop\3-2\Servis Odaklı Mimari\Works\Work2\RentACar\SOA_RAC_NTA-master\SOA_RAC_NTA-master\RentACar.Bll\bin\Debug\EntityFramework.dll</HintPath>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\SOA_RAC_NTA-master\SOA_RAC_NTA-master\RentACar.Bll\bin\Debug\EntityFramework.dll</HintPath>
     </Reference>
-    <Reference Include="Interfaces">
-      <HintPath>..\..\..\..\Desktop\3-2\Servis Odaklı Mimari\Works\Work2\RentACar\SOA_RAC_NTA-master\SOA_RAC_NTA-master\RentACar.Bll\bin\Debug\Interfaces.dll</HintPath>
+    <Reference Include="Interfaces, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\SOA_RAC_NTA-master\SOA_RAC_NTA-master\RentACar.Bll\bin\Debug\Interfaces.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
-    <Reference Include="RentACar.Bll">
-      <HintPath>..\..\..\..\Desktop\3-2\Servis Odaklı Mimari\Works\Work2\RentACar\SOA_RAC_NTA-master\SOA_RAC_NTA-master\RentACar.Bll\bin\Debug\RentACar.Bll.dll</HintPath>
+    <Reference Include="RentACar.Bll, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\SOA_RAC_NTA-master\SOA_RAC_NTA-master\RentACar.Bll\bin\Debug\RentACar.Bll.dll</HintPath>
     </Reference>
-    <Reference Include="RentACar.Model">
-      <HintPath>..\..\..\..\Desktop\3-2\Servis Odaklı Mimari\Works\Work2\RentACar\SOA_RAC_NTA-master\SOA_RAC_NTA-master\RentACar.Bll\bin\Debug\RentACar.Model.dll</HintPath>
+    <Reference Include="RentACar.Model, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\SOA_RAC_NTA-master\SOA_RAC_NTA-master\RentACar.Bll\bin\Debug\RentACar.Model.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />

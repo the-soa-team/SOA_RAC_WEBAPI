@@ -120,7 +120,7 @@ namespace RentACarWebApi.Controllers
 
             using (var empManager = new EmployeeManager())
             {
-                content.Result = empManager.EmployeeLogin(UserName,Password) ? "1" : "0"; //WHATS CAN I DO SOMETIMES
+                content.Result = empManager.EmployeeLogin(UserName,Password) != null ? "1" : "0"; 
 
                 return new StandartResult<Employees>(content, Request);
             }
