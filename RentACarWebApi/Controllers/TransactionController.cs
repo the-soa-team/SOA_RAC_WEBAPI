@@ -113,5 +113,58 @@ namespace RentACarWebApi.Controllers
                 return new StandartResult<Transactions>(content, Request);
             }
         }
+
+        public IHttpActionResult Rent(Transactions transaction, Cars car, Customers customer, DateTime first, DateTime second)
+        {
+            ResponseContent<Transactions> content;
+
+            using (var transManager = new TransactionManager())
+            {
+                // Get customer from business layer (Core App)
+                List<Transactions> transactions = null;
+                try
+                {
+                    var c = transManager.Rent(transaction, car, customer, first, second);
+
+                    // Prepare a content
+                    content = new ResponseContent<Transactions>(transactions);
+
+                    // Return content as a json and proper http response
+                    return new XmlResult<Transactions>(content, Request);
+                }
+                catch (Exception)
+                {
+                    // Prepare a content
+                    content = new ResponseContent<Transactions>(null);
+                    return new XmlResult<Transactions>(content, Request);
+                }
+            }
+        }
+
+        public IHttpActionResult GiveBack(Cars car, Customers customer)
+        {
+            ResponseContent<Transactions> content;
+
+            using (var transManager = new TransactionManager())
+            {
+                // Get customer from business layer (Core App)
+                List<Transactions> transactions = null;
+                try
+                {
+                    var c = transManager.GiveBack(car, customer);
+                    // Prepare a content
+                    content = new ResponseContent<Transactions>(transactions);
+
+                    // Return content as a json and proper http response
+                    return new XmlResult<Transactions>(content, Request);
+                }
+                catch (Exception)
+                {
+                    // Prepare a content
+                    content = new ResponseContent<Transactions>(null);
+                    return new XmlResult<Transactions>(content, Request);
+                }
+            }
+        }
     }
 }
